@@ -1,0 +1,559 @@
+    /* ========================================
+   CONTACT PAGE STYLES (cnt- prefix)
+======================================== */
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+.cnt-page-header {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    text-align: center;
+}
+
+.cnt-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cnt-page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.cnt-page-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.cnt-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cnt-breadcrumb a {
+    color: #1e40af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cnt-breadcrumb a:hover {
+    color: #1e3a8a;
+}
+
+.cnt-separator {
+    color: #94a3b8;
+}
+
+.cnt-current {
+    color: #64748b;
+}
+
+/* ========================================
+   CONTACT INFO CARDS
+======================================== */
+.cnt-info-section {
+    padding: 80px 0;
+    background: #ffffff;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.cnt-info-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.cnt-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #1e40af;
+}
+
+.cnt-info-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.cnt-info-card:hover .cnt-info-icon {
+    transform: scale(1.1);
+}
+
+.cnt-info-icon i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.cnt-info-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.cnt-info-text {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.cnt-info-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   CONTACT FORM SECTION
+======================================== */
+.cnt-form-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.cnt-form-wrapper {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cnt-form-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.cnt-form-desc {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+}
+
+.cnt-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.cnt-form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.cnt-required {
+    color: #ef4444;
+}
+
+.cnt-form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #1e293b;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.cnt-form-control:focus {
+    outline: none;
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.cnt-form-control::placeholder {
+    color: #cbd5e1;
+}
+
+textarea.cnt-form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+select.cnt-form-control {
+    cursor: pointer;
+}
+
+.cnt-submit-btn {
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.cnt-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+}
+
+/* ========================================
+   MAP & OFFICE INFO
+======================================== */
+.cnt-map-wrapper {
+    position: sticky;
+    top: 100px;
+}
+
+.cnt-map-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.cnt-office-info {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cnt-office-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.cnt-office-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cnt-hour-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.cnt-hour-item:last-child {
+    border-bottom: none;
+}
+
+.cnt-day {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.cnt-time {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* ========================================
+   SOCIAL MEDIA SECTION
+======================================== */
+.cnt-social-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.cnt-social-wrapper {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cnt-social-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.cnt-social-desc {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 2.5rem;
+}
+
+.cnt-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cnt-social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 25px 30px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.cnt-social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #1e40af;
+    background: #ffffff;
+}
+
+.cnt-social-link i {
+    font-size: 28px;
+    color: #1e40af;
+    transition: all 0.3s ease;
+}
+
+.cnt-social-link:hover i {
+    transform: scale(1.2);
+}
+
+.cnt-social-link span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ========================================
+   FAQ SECTION
+======================================== */
+.cnt-faq-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.cnt-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.cnt-section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.cnt-accordion-item {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.cnt-accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.cnt-accordion-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f172a;
+    background: #ffffff;
+    border: none;
+    padding: 20px 25px;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.cnt-accordion-btn:not(.collapsed) {
+    background: #f8fafc;
+    color: #1e40af;
+}
+
+.cnt-accordion-btn:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.cnt-accordion-btn::after {
+    background-image: none;
+    content: '\F282';
+    font-family: 'Bootstrap-icons';
+    font-size: 20px;
+    color: #1e40af;
+}
+
+.cnt-accordion-btn:not(.collapsed)::after {
+    content: '\F286';
+    transform: none;
+}
+
+.cnt-accordion-body {
+    padding: 20px 25px;
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    background: #ffffff;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+======================================== */
+@media (max-width: 991px) {
+    .cnt-page-header {
+        padding: 120px 0 60px;
+    }
+
+    .cnt-page-title {
+        font-size: 2.25rem;
+    }
+
+    .cnt-info-section {
+        padding: 60px 0;
+    }
+
+    .cnt-form-section,
+    .cnt-social-section,
+    .cnt-faq-section {
+        padding: 60px 0;
+    }
+
+    .cnt-form-wrapper {
+        padding: 40px 30px;
+        margin-bottom: 2rem;
+    }
+
+    .cnt-map-wrapper {
+        position: relative;
+        top: 0;
+    }
+
+    .cnt-section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .cnt-page-header {
+        padding: 100px 0 50px;
+    }
+
+    .cnt-page-title {
+        font-size: 1.75rem;
+    }
+
+    .cnt-page-subtitle {
+        font-size: 1rem;
+    }
+
+    .cnt-info-section {
+        padding: 50px 0;
+        margin-top: 0;
+    }
+
+    .cnt-info-card {
+        padding: 30px 20px;
+    }
+
+    .cnt-info-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cnt-info-icon i {
+        font-size: 28px;
+    }
+
+    .cnt-form-section,
+    .cnt-social-section,
+    .cnt-faq-section {
+        padding: 50px 0;
+    }
+
+    .cnt-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .cnt-form-title {
+        font-size: 1.5rem;
+    }
+
+    .cnt-form-control {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .cnt-submit-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+
+    .cnt-map-container {
+        height: 300px;
+    }
+
+    .cnt-office-info {
+        padding: 25px 20px;
+    }
+
+    .cnt-social-title {
+        font-size: 1.5rem;
+    }
+
+    .cnt-social-links {
+        gap: 1rem;
+    }
+
+    .cnt-social-link {
+        padding: 20px 25px;
+        min-width: 100px;
+    }
+
+    .cnt-social-link i {
+        font-size: 24px;
+    }
+
+    .cnt-section-title {
+        font-size: 1.65rem;
+    }
+
+    .cnt-accordion-btn {
+        font-size: 1rem;
+        padding: 18px 20px;
+    }
+
+    .cnt-accordion-body {
+        padding: 18px 20px;
+        font-size: 14px;
+    }
+}

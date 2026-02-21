@@ -1,0 +1,591 @@
+/* ========================================
+   SERVICE PAGE STYLES (srv- prefix)
+======================================== */
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+.srv-page-header {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    text-align: center;
+}
+
+.srv-header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.srv-page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.srv-page-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.srv-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.srv-breadcrumb a {
+    color: #1e40af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.srv-breadcrumb a:hover {
+    color: #1e3a8a;
+}
+
+.srv-separator {
+    color: #94a3b8;
+}
+
+.srv-current {
+    color: #64748b;
+}
+
+/* ========================================
+   SERVICES OVERVIEW
+======================================== */
+.srv-overview-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.srv-section-badge {
+    display: inline-block;
+    background: rgba(30, 64, 175, 0.1);
+    color: #1e40af;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.srv-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.srv-text-blue {
+    color: #1e40af;
+}
+
+.srv-section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.srv-section-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Service Cards */
+.srv-card {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.srv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: #1e40af;
+}
+
+.srv-card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.srv-card:hover .srv-card-icon {
+    transform: scale(1.1);
+}
+
+.srv-card-icon i {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.srv-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.srv-card-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.srv-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex: 1;
+}
+
+.srv-card-features li {
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.srv-card-features li i {
+    color: #1e40af;
+    font-size: 16px;
+}
+
+.srv-card-link {
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.srv-card-link:hover {
+    gap: 8px;
+}
+
+/* ========================================
+   WHY CHOOSE SECTION
+======================================== */
+.srv-why-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.srv-why-image {
+    position: relative;
+}
+
+.srv-why-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.srv-why-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: #ffffff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.3);
+}
+
+.srv-badge-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.srv-badge-text {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.srv-why-features {
+    margin-top: 2rem;
+}
+
+.srv-why-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.srv-why-item:last-child {
+    margin-bottom: 0;
+}
+
+.srv-why-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.srv-why-icon i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.srv-why-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.srv-why-text {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   PROCESS SECTION
+======================================== */
+.srv-process-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.srv-process-card {
+    text-align: center;
+    padding: 40px 25px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.srv-process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #1e40af;
+    background: #ffffff;
+}
+
+.srv-process-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+}
+
+.srv-process-icon {
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.srv-process-card:hover .srv-process-icon {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-color: #1e40af;
+}
+
+.srv-process-icon i {
+    font-size: 32px;
+    color: #1e40af;
+    transition: all 0.3s ease;
+}
+
+.srv-process-card:hover .srv-process-icon i {
+    color: #ffffff;
+}
+
+.srv-process-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.srv-process-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   CTA SECTION
+======================================== */
+.srv-cta-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.srv-cta-wrapper {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+}
+
+.srv-cta-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.srv-cta-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.srv-cta-btn {
+    background: #fbbf24;
+    color: #0f172a;
+    padding: 16px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.srv-cta-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+    color: #0f172a;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+======================================== */
+@media (max-width: 991px) {
+    .srv-page-header {
+        padding: 120px 0 60px;
+    }
+
+    .srv-page-title {
+        font-size: 2.25rem;
+    }
+
+    .srv-overview-section,
+    .srv-why-section,
+    .srv-process-section,
+    .srv-cta-section {
+        padding: 60px 0;
+    }
+
+    .srv-section-title {
+        font-size: 2rem;
+    }
+
+    .srv-card {
+        padding: 30px 25px;
+    }
+
+    .srv-why-badge {
+        width: 120px;
+        height: 120px;
+        top: -15px;
+        right: -15px;
+    }
+
+    .srv-badge-number {
+        font-size: 2rem;
+    }
+
+    .srv-why-image {
+        margin-bottom: 3rem;
+    }
+
+    .srv-cta-wrapper {
+        padding: 50px 40px;
+    }
+
+    .srv-cta-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .srv-page-header {
+        padding: 100px 0 50px;
+    }
+
+    .srv-page-title {
+        font-size: 1.75rem;
+    }
+
+    .srv-page-subtitle {
+        font-size: 1rem;
+    }
+
+    .srv-overview-section,
+    .srv-why-section,
+    .srv-process-section,
+    .srv-cta-section {
+        padding: 50px 0;
+    }
+
+    .srv-section-title {
+        font-size: 1.65rem;
+    }
+
+    .srv-section-subtitle {
+        font-size: 1rem;
+    }
+
+    .srv-card {
+        padding: 25px 20px;
+    }
+
+    .srv-card-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .srv-card-icon i {
+        font-size: 30px;
+    }
+
+    .srv-card-title {
+        font-size: 1.25rem;
+    }
+
+    .srv-why-badge {
+        width: 100px;
+        height: 100px;
+        top: -10px;
+        right: -10px;
+    }
+
+    .srv-badge-number {
+        font-size: 1.5rem;
+    }
+
+    .srv-badge-text {
+        font-size: 11px;
+    }
+
+    .srv-why-item {
+        gap: 1rem;
+    }
+
+    .srv-why-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .srv-why-icon i {
+        font-size: 20px;
+    }
+
+    .srv-why-title {
+        font-size: 1.1rem;
+    }
+
+    .srv-process-card {
+        padding: 35px 20px;
+    }
+
+    .srv-process-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .srv-process-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .srv-process-icon i {
+        font-size: 28px;
+    }
+
+    .srv-process-title {
+        font-size: 1.1rem;
+    }
+
+    .srv-cta-section {
+        padding: 60px 0;
+    }
+
+    .srv-cta-wrapper {
+        padding: 40px 25px;
+    }
+
+    .srv-cta-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .srv-cta-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .srv-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bexily - Custom ERP Software Development Company in Kolkata</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/ui-component/about-us.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+     NAVIGATION 
+======================================== -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark py-2 fixed-top cx-main-header">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="javascript:void(0)">
+                <!-- Full Logo -->
+                <img src="assets/images/bexily-new-logo.png" class="navbar-logo full-logo d-lg-none" />
+
+                <!-- Branding Logo -->
+                <img src="assets/images/mobile-logo.png" class="navbar-logo mobile-logo d-lg-none"
+                    style="width:60px; display:none;" />
+
+                <!-- Desktop logo (as it is) -->
+                <img src="assets/images/bexily-new-logo.png" class="navbar-logo d-none d-lg-block" />
+            </a>
+
+
+            <!-- Schedule A Call (MOBILE/TABLET ONLY) -->
+            <a href="#quote" class="btn mobile-call-btn px-5 py-2 d-lg-none mobile-get-started" style="display: none;">
+                Schedule A Call
+            </a>
+
+            <!-- MOBILE TOGGLER -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileCanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- DESKTOP NAV -->
+            <div class="collapse navbar-collapse d-none d-lg-flex">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+
+
+                    <!-- Our Service Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#">
+                            Our Service
+                        </a>
+
+                        <div class="dropdown-menu mega-menu shadow border-0 p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <!-- <h6>Software Solutions</h6> -->
+                                    <ul class="mega-list">
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Web Development</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> App Development</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Custom Software
+                                                Development</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Cloud Solution</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> DevOps Solution</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> UI/UX Design Service</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Digital Marketing Service</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <!-- <h6>Advance Technology</h6> -->
+                                    <ul class="mega-list">
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Blockchain and
+                                                Cryptocurrency</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Artificial Intelligence</a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Machine learning</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Data Science</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Industry Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#">
+                            Industry
+                        </a>
+
+                        <div class="dropdown-menu mega-menu shadow border-0 p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Ecommerce and Retail</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Logistics &
+                                                Transportation</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Real Estate</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Manufacturing</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Education</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Healthcare</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- ERP Services Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#">
+                            ERP Services
+                        </a>
+
+                        <!-- <div class="dropdown-menu mega-menu erp-menu shadow border-0 p-4">
+                            <a href="service.php" class="erp-menu-item">
+                                <strong><i class="fas fa-chart-line"></i> Complete ERP Solutions</strong>
+                                <small>Comprehensive enterprise resource planning</small>
+                            </a>
+                            
+                        </div> -->
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li> -->
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-warning rounded-pill px-4" href="#quote">Schedule A Call</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== OFFCANVAS (MOBILE ONLY) ===== -->
+    <div class="offcanvas offcanvas-start bg-dark text-white w-100" tabindex="-1" id="mobileCanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body mobile-menu">
+
+            <!-- Mobile Accordion -->
+            <div class="accordion mobile-accordion accordion-flush" id="mobileAccordion">
+
+                <!-- ERP Services Accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#erpCollapse">
+                            ERP Services
+                        </button>
+                    </h2>
+                    <div id="erpCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                        <div class="accordion-body">
+                            <a href="service.php" class="mobile-submenu-link">
+                                <i class="fas fa-chart-line"></i> Complete ERP Solutions
+                            </a>
+                            <!-- Add more ERP submenu items here in future -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Service Accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#serviceCollapse">
+                            Our Service
+                        </button>
+                    </h2>
+                    <div id="serviceCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                        <div class="accordion-body">
+
+                            <div class="mobile-submenu-title">Software Solutions</div>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Web Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> App Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Custom Software Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Cloud Solution
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> DevOps Solution
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> UI/UX Design Service
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Digital Marketing Service
+                            </a>
+
+                            <div class="mobile-submenu-title">Advance Technology</div>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Blockchain and Cryptocurrency
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Artificial Intelligence
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Machine Learning
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Data Science
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#industryCollapse">
+                            Industry
+                        </button>
+                    </h2>
+                    <div id="industryCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                        <div class="accordion-body">
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Ecommerce and Retail
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Logistics & Transportation
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Real Estate
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Manufacturing
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Education
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Healthcare
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Navigation Links -->
+            <div class="px-3">
+                <a href="/" class="nav-link-item">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="about.html" class="nav-link-item">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="contact.html" class="nav-link-item">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+                <a href="blog.html" class="nav-link-item">
+                    <i class="fas fa-blog"></i> Blog
+                </a>
+                <a href="faq.html" class="nav-link-item">
+                    <i class="fas fa-question-circle"></i> FAQ
+                </a>
+
+                <a class="btn btn-warning rounded-pill px-4 btn-mobile" href="#quote">Schedule A Call</a>
+            </div>
+
+        </div>
+    </div>
+
+<!-- ========================================
+     ABOUT PAGE - HERO BANNER SECTION
+======================================== -->
+<section class="abt-hero-banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="abt-hero-content">
+                    <span class="abt-hero-badge">About Bexily</span>
+                    <h1 class="abt-hero-title">Transforming Businesses Through <span class="abt-highlight">Innovative ERP Solutions</span></h1>
+                    <p class="abt-hero-desc">We are Kolkata's leading custom ERP software development company, delivering intelligent and scalable solutions tailored to your unique business needs for over 10 years.</p>
+                    <div class="abt-hero-stats">
+                        <div class="abt-stat-item">
+                            <h3 class="abt-stat-number">10+</h3>
+                            <p class="abt-stat-label">Years Experience</p>
+                        </div>
+                        <div class="abt-stat-item">
+                            <h3 class="abt-stat-number">500+</h3>
+                            <p class="abt-stat-label">Projects Delivered</p>
+                        </div>
+                        <div class="abt-stat-item">
+                            <h3 class="abt-stat-number">98%</h3>
+                            <p class="abt-stat-label">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="abt-hero-image">
+                    <img src="https://picsum.photos/600/500?random=1" alt="About Bexily" class="img-fluid">
+                    <div class="abt-hero-badge-float">
+                        <i class="bi bi-award"></i>
+                        <span>Certified Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     ABOUT COMPANY SECTION
+======================================== -->
+<section class="abt-company-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="abt-company-image-wrapper">
+                    <img src="https://picsum.photos/600/500?random=2" alt="Our Company" class="abt-company-img img-fluid">
+                    <div class="abt-experience-badge">
+                        <div class="abt-exp-number">10+</div>
+                        <div class="abt-exp-text">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="abt-company-content">
+                    <span class="abt-section-badge">Who We Are</span>
+                    <h2 class="abt-section-title">Building <span class="abt-text-blue">Tomorrow's Solutions</span> Today</h2>
+                    <p class="abt-section-desc">Founded in 2015, Bexily has been at the forefront of custom ERP software development in Kolkata. We specialize in creating intelligent, scalable, and user-friendly solutions that transform how businesses operate.</p>
+                    <p class="abt-section-desc">Our team of expert developers, designers, and consultants work closely with clients to understand their unique challenges and deliver solutions that drive real business value.</p>
+                    
+                    <div class="abt-company-features">
+                        <div class="abt-feature-item">
+                            <div class="abt-feature-icon">
+                                <i class="bi bi-bullseye"></i>
+                            </div>
+                            <div class="abt-feature-content">
+                                <h5 class="abt-feature-title">Our Mission</h5>
+                                <p class="abt-feature-text">Empower businesses with cutting-edge technology solutions that streamline operations and accelerate growth.</p>
+                            </div>
+                        </div>
+                        <div class="abt-feature-item">
+                            <div class="abt-feature-icon">
+                                <i class="bi bi-eye"></i>
+                            </div>
+                            <div class="abt-feature-content">
+                                <h5 class="abt-feature-title">Our Vision</h5>
+                                <p class="abt-feature-text">To be the most trusted technology partner for businesses seeking digital transformation across India.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     OUR VALUES SECTION
+======================================== -->
+<section class="abt-values-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="abt-section-badge">Our Core Values</span>
+            <h2 class="abt-section-title">What <span class="abt-text-blue">Drives Us</span> Forward</h2>
+            <p class="abt-section-subtitle">The principles that guide everything we do</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="abt-value-card">
+                    <div class="abt-value-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h4 class="abt-value-title">Innovation</h4>
+                    <p class="abt-value-desc">Continuously pushing boundaries to deliver cutting-edge solutions that keep our clients ahead of the curve.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="abt-value-card">
+                    <div class="abt-value-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4 class="abt-value-title">Integrity</h4>
+                    <p class="abt-value-desc">Building trust through transparency, honesty, and ethical business practices in every interaction.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="abt-value-card">
+                    <div class="abt-value-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h4 class="abt-value-title">Collaboration</h4>
+                    <p class="abt-value-desc">Working hand-in-hand with clients as partners to achieve shared success and meaningful results.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="abt-value-card">
+                    <div class="abt-value-icon">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <h4 class="abt-value-title">Excellence</h4>
+                    <p class="abt-value-desc">Committed to delivering the highest quality in every project, exceeding expectations consistently.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="abt-value-card">
+                    <div class="abt-value-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h4 class="abt-value-title">Customer Focus</h4>
+                    <p class="abt-value-desc">Your success is our priority. We listen, understand, and deliver solutions that truly matter.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="abt-value-card">
+                    <div class="abt-value-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h4 class="abt-value-title">Growth Mindset</h4>
+                    <p class="abt-value-desc">Constantly learning, adapting, and evolving to meet the changing needs of our clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     OUR TEAM SECTION
+======================================== -->
+<section class="abt-team-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="abt-section-badge">Meet Our Team</span>
+            <h2 class="abt-section-title">The <span class="abt-text-blue">Experts</span> Behind Your Success</h2>
+            <p class="abt-section-subtitle">Passionate professionals dedicated to bringing your vision to life</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="abt-team-card">
+                    <div class="abt-team-image">
+                        <img src="https://picsum.photos/300/350?random=3" alt="Team Member" class="img-fluid">
+                        <div class="abt-team-overlay">
+                            <div class="abt-team-social">
+                                <a href="#" class="abt-social-link"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abt-team-info">
+                        <h5 class="abt-team-name">Rajesh Kumar</h5>
+                        <p class="abt-team-role">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="abt-team-card">
+                    <div class="abt-team-image">
+                        <img src="https://picsum.photos/300/350?random=4" alt="Team Member" class="img-fluid">
+                        <div class="abt-team-overlay">
+                            <div class="abt-team-social">
+                                <a href="#" class="abt-social-link"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abt-team-info">
+                        <h5 class="abt-team-name">Priya Sharma</h5>
+                        <p class="abt-team-role">CTO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="abt-team-card">
+                    <div class="abt-team-image">
+                        <img src="https://picsum.photos/300/350?random=5" alt="Team Member" class="img-fluid">
+                        <div class="abt-team-overlay">
+                            <div class="abt-team-social">
+                                <a href="#" class="abt-social-link"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abt-team-info">
+                        <h5 class="abt-team-name">Amit Patel</h5>
+                        <p class="abt-team-role">Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="abt-team-card">
+                    <div class="abt-team-image">
+                        <img src="https://picsum.photos/300/350?random=6" alt="Team Member" class="img-fluid">
+                        <div class="abt-team-overlay">
+                            <div class="abt-team-social">
+                                <a href="#" class="abt-social-link"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="abt-social-link"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abt-team-info">
+                        <h5 class="abt-team-name">Sneha Desai</h5>
+                        <p class="abt-team-role">Project Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     OUR JOURNEY/TIMELINE SECTION
+======================================== -->
+<section class="abt-journey-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="abt-section-badge">Our Journey</span>
+            <h2 class="abt-section-title">A Decade of <span class="abt-text-blue">Excellence</span></h2>
+            <p class="abt-section-subtitle">Key milestones that shaped our success story</p>
+        </div>
+
+        <div class="abt-timeline">
+            <div class="abt-timeline-item">
+                <div class="abt-timeline-year">2015</div>
+                <div class="abt-timeline-content">
+                    <div class="abt-timeline-icon">
+                        <i class="bi bi-flag"></i>
+                    </div>
+                    <h5 class="abt-timeline-title">Company Founded</h5>
+                    <p class="abt-timeline-desc">Bexily was established in Kolkata with a vision to revolutionize ERP solutions for local businesses.</p>
+                </div>
+            </div>
+
+            <div class="abt-timeline-item">
+                <div class="abt-timeline-year">2017</div>
+                <div class="abt-timeline-content">
+                    <div class="abt-timeline-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h5 class="abt-timeline-title">First Major Achievement</h5>
+                    <p class="abt-timeline-desc">Successfully delivered 50+ projects and received "Best Startup" award from Kolkata Tech Chamber.</p>
+                </div>
+            </div>
+
+            <div class="abt-timeline-item">
+                <div class="abt-timeline-year">2019</div>
+                <div class="abt-timeline-content">
+                    <div class="abt-timeline-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h5 class="abt-timeline-title">Team Expansion</h5>
+                    <p class="abt-timeline-desc">Grew our team to 50+ talented professionals and expanded services to include AI and ML solutions.</p>
+                </div>
+            </div>
+
+            <div class="abt-timeline-item">
+                <div class="abt-timeline-year">2021</div>
+                <div class="abt-timeline-content">
+                    <div class="abt-timeline-icon">
+                        <i class="bi bi-globe"></i>
+                    </div>
+                    <h5 class="abt-timeline-title">National Recognition</h5>
+                    <p class="abt-timeline-desc">Expanded operations across India, serving clients in 15+ states with innovative ERP solutions.</p>
+                </div>
+            </div>
+
+            <div class="abt-timeline-item">
+                <div class="abt-timeline-year">2024</div>
+                <div class="abt-timeline-content">
+                    <div class="abt-timeline-icon">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <h5 class="abt-timeline-title">Industry Leader</h5>
+                    <p class="abt-timeline-desc">Completed 500+ successful projects with 98% client satisfaction rate and multiple industry awards.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     CTA SECTION
+======================================== -->
+<section class="abt-cta-section">
+    <div class="container">
+        <div class="abt-cta-wrapper">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="abt-cta-title">Ready to Transform Your Business?</h2>
+                    <p class="abt-cta-desc">Let's discuss how our custom ERP solutions can help you achieve your business goals.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#quote" class="btn abt-cta-btn">Get Started Today <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+     <!-- ========================================
+     FOOTER
+======================================== -->
+    <footer class="footer footer-bg" id="contact">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Company Info -->
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="assets/images/bexily-new-logo.png" alt="" srcset="" class="navbar-logo" />
+                    </div>
+                    <p class="footer-desc text-white">Kolkata's leading ERP software development company delivering
+                        intelligent,
+                        scalable solutions tailored to your business needs. Over 10 years of excellence.</p>
+                    <div class="mt-4">
+                        <p class="mb-2 text-white"><i class="bi bi-geo-alt me-2"></i>123 Street, New York, USA</p>
+                        <p class="mb-2 text-white"><i class="bi bi-telephone me-2"></i>+012 345 6789</p>
+                        <p class="mb-0 text-white"><i class="bi bi-envelope me-2"></i>info@example.com</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#industry">Industries</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="footer-title">Our Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Custom ERP Development</a></li>
+                        <li><a href="#">ERP Integration</a></li>
+                        <li><a href="#">ERP Migration</a></li>
+                        <li><a href="#">Maintenance & Support</a></li>
+                        <li><a href="#">Cloud ERP Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Industries -->
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="footer-title">Industries</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Textile Industry</a></li>
+                        <li><a href="#">Garment Manufacturing</a></li>
+                        <li><a href="#">Finance & Accounting</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Manufacturing</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom text-white">
+                <p>&copy; 2026 Bexily. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
+        const header = document.querySelector(".cx-main-header");
+        const mobileBtn = document.querySelector(".mobile-get-started");
+        const fullLogo = document.querySelector(".full-logo");
+        const mobileLogo = document.querySelector(".mobile-logo");
+
+        window.addEventListener("scroll", () => {
+            const isMobile = window.innerWidth < 992;
+            if (!isMobile) return;
+
+            if (window.scrollY >= 150) {
+                header.classList.add("cx-header-sticky");
+                mobileBtn.classList.add("show");
+
+                fullLogo.style.display = "none";
+                mobileLogo.style.display = "block";
+            } else {
+                header.classList.remove("cx-header-sticky");
+                mobileBtn.classList.remove("show");
+
+                fullLogo.style.display = "block";
+                mobileLogo.style.display = "none";
+            }
+        });
+    </script> -->
+    <script>
+        const header = document.querySelector(".cx-main-header");
+        const mobileBtn = document.querySelector(".mobile-get-started");
+        const fullLogo = document.querySelector(".full-logo");
+        const mobileLogo = document.querySelector(".mobile-logo");
+
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", () => {
+            const isMobile = window.innerWidth < 992;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (isMobile) {
+                // Mobile behavior (existing code)
+                if (scrollTop >= 150) {
+                    header.classList.add("cx-header-sticky");
+                    mobileBtn.classList.add("show");
+                    fullLogo.style.display = "none";
+                    mobileLogo.style.display = "block";
+                } else {
+                    header.classList.remove("cx-header-sticky");
+                    mobileBtn.classList.remove("show");
+                    fullLogo.style.display = "block";
+                    mobileLogo.style.display = "none";
+                }
+            } else {
+                // Desktop behavior - hide on scroll down, show on scroll up
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    header.classList.add("cx-header-hidden");
+                    header.classList.remove("cx-header-visible");
+                } else {
+                    // Scrolling up
+                    header.classList.remove("cx-header-hidden");
+                    header.classList.add("cx-header-visible");
+                }
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+    <script>
+        // FAQ Hover Open Feature with Smooth Transition
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item-pro');
+            let hoverTimeout;
+
+            faqItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    clearTimeout(hoverTimeout);
+
+                    hoverTimeout = setTimeout(() => {
+                        const button = this.querySelector('.accordion-button');
+                        const target = button.getAttribute('data-bs-target');
+                        const collapse = document.querySelector(target);
+
+                        if (button.classList.contains('collapsed')) {
+                            // Smooth open with Bootstrap's built-in animation
+                            const bsCollapse = new bootstrap.Collapse(collapse, {
+                                toggle: true
+                            });
+                        }
+                    }, 200);
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    clearTimeout(hoverTimeout);
+                });
+            });
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,740 @@
+     /* ========================================
+   ABOUT PAGE STYLES (abt- prefix)
+======================================== */
+
+/* ========================================
+   HERO BANNER SECTION
+======================================== */
+.abt-hero-banner {
+    padding: 150px 0 100px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.abt-hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.abt-hero-content {
+    padding-right: 2rem;
+}
+
+.abt-hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.abt-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+.abt-highlight {
+    color: #1e40af;
+    position: relative;
+}
+
+.abt-hero-desc {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.abt-hero-stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.abt-stat-item {
+    text-align: left;
+}
+
+.abt-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e40af;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.abt-stat-label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.abt-hero-image {
+    position: relative;
+}
+
+.abt-hero-image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.abt-hero-badge-float {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.abt-hero-badge-float i {
+    font-size: 24px;
+    color: #fbbf24;
+}
+
+.abt-hero-badge-float span {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 15px;
+}
+
+/* ========================================
+   ABOUT COMPANY SECTION
+======================================== */
+.abt-company-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.abt-company-image-wrapper {
+    position: relative;
+}
+
+.abt-company-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.abt-experience-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: #ffffff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.3);
+}
+
+.abt-exp-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.abt-exp-text {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.abt-section-badge {
+    display: inline-block;
+    background: rgba(30, 64, 175, 0.1);
+    color: #1e40af;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.abt-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.abt-text-blue {
+    color: #1e40af;
+}
+
+.abt-section-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.abt-company-features {
+    margin-top: 2rem;
+}
+
+.abt-feature-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.abt-feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.abt-feature-icon i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.abt-feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.abt-feature-text {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   VALUES SECTION
+======================================== */
+.abt-values-section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.abt-section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-top: 1rem;
+}
+
+.abt-value-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+    height: 100%;
+}
+
+.abt-value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #1e40af;
+}
+
+.abt-value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.abt-value-card:hover .abt-value-icon {
+    transform: scale(1.1);
+}
+
+.abt-value-icon i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.abt-value-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.abt-value-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   TEAM SECTION
+======================================== */
+.abt-team-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.abt-team-card {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.abt-team-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.abt-team-image img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.abt-team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 64, 175, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.abt-team-card:hover .abt-team-overlay {
+    opacity: 1;
+}
+
+.abt-team-card:hover .abt-team-image img {
+    transform: scale(1.1);
+}
+
+.abt-team-social {
+    display: flex;
+    gap: 15px;
+}
+
+.abt-social-link {
+    width: 45px;
+    height: 45px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e40af;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.abt-social-link:hover {
+    background: #fbbf24;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+.abt-social-link i {
+    font-size: 18px;
+}
+
+.abt-team-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.abt-team-role {
+    font-size: 14px;
+    color: #1e40af;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   JOURNEY/TIMELINE SECTION
+======================================== */
+.abt-journey-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+}
+
+.abt-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.abt-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #1e40af 0%, #3b82f6 100%);
+    transform: translateX(-50%);
+}
+
+.abt-timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.abt-timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.abt-timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.abt-timeline-year {
+    width: 45%;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1e40af;
+}
+
+.abt-timeline-item:nth-child(even) .abt-timeline-year {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 0;
+}
+
+.abt-timeline-content {
+    width: 45%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.abt-timeline-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #f8fafc;
+    z-index: 2;
+}
+
+.abt-timeline-item:nth-child(odd) .abt-timeline-icon {
+    left: auto;
+    right: -80px;
+}
+
+.abt-timeline-item:nth-child(even) .abt-timeline-icon {
+    right: auto;
+    left: -80px;
+}
+
+.abt-timeline-icon i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.abt-timeline-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.abt-timeline-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   CTA SECTION
+======================================== */
+.abt-cta-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.abt-cta-wrapper {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+}
+
+.abt-cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.abt-cta-desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.abt-cta-btn {
+    background: #fbbf24;
+    color: #0f172a;
+    padding: 16px 40px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.abt-cta-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+    color: #0f172a;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+======================================== */
+@media (max-width: 991px) {
+    .abt-hero-banner {
+        padding: 120px 0 80px;
+    }
+
+    .abt-hero-title {
+        font-size: 2.25rem;
+    }
+
+    .abt-hero-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .abt-hero-stats {
+        gap: 2rem;
+    }
+
+    .abt-company-section,
+    .abt-values-section,
+    .abt-team-section,
+    .abt-journey-section,
+    .abt-cta-section {
+        padding: 80px 0;
+    }
+
+    .abt-section-title {
+        font-size: 2rem;
+    }
+
+    .abt-experience-badge {
+        width: 120px;
+        height: 120px;
+        top: -15px;
+        right: -15px;
+    }
+
+    .abt-exp-number {
+        font-size: 2rem;
+    }
+
+    .abt-timeline::before {
+        left: 30px;
+    }
+
+    .abt-timeline-item {
+        flex-direction: row !important;
+    }
+
+    .abt-timeline-year {
+        width: 100px;
+        text-align: left;
+        padding-left: 80px;
+        padding-right: 0 !important;
+        font-size: 1.5rem;
+    }
+
+    .abt-timeline-content {
+        width: calc(100% - 100px);
+        margin-left: auto;
+    }
+
+    .abt-timeline-icon {
+        left: 30px !important;
+        right: auto !important;
+    }
+
+    .abt-cta-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .abt-hero-banner {
+        padding: 100px 0 60px;
+    }
+
+    .abt-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .abt-hero-desc {
+        font-size: 1rem;
+    }
+
+    .abt-hero-stats {
+        gap: 1.5rem;
+    }
+
+    .abt-stat-number {
+        font-size: 2rem;
+    }
+
+    .abt-company-section,
+    .abt-values-section,
+    .abt-team-section,
+    .abt-journey-section,
+    .abt-cta-section {
+        padding: 60px 0;
+    }
+
+    .abt-section-title {
+        font-size: 1.65rem;
+    }
+
+    .abt-experience-badge {
+        width: 100px;
+        height: 100px;
+        top: -10px;
+        right: -10px;
+    }
+
+    .abt-exp-number {
+        font-size: 1.5rem;
+    }
+
+    .abt-exp-text {
+        font-size: 11px;
+    }
+
+    .abt-feature-item {
+        gap: 1rem;
+    }
+
+    .abt-feature-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .abt-feature-icon i {
+        font-size: 20px;
+    }
+
+    .abt-value-card {
+        padding: 30px 20px;
+    }
+
+    .abt-value-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .abt-value-icon i {
+        font-size: 28px;
+    }
+
+    .abt-timeline-year {
+        width: 80px;
+        padding-left: 60px;
+        font-size: 1.25rem;
+    }
+
+    .abt-timeline-content {
+        width: calc(100% - 80px);
+        padding: 20px;
+    }
+
+    .abt-timeline-icon {
+        width: 50px;
+        height: 50px;
+        left: 20px !important;
+    }
+
+    .abt-timeline-icon i {
+        font-size: 20px;
+    }
+
+    .abt-timeline-title {
+        font-size: 1.1rem;
+    }
+
+    .abt-cta-wrapper {
+        padding: 40px 30px;
+    }
+
+    .abt-cta-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .abt-cta-desc {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .abt-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
