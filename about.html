@@ -20,41 +20,77 @@
 
 <body>
 
-    <!-- NAVIGATION - Same as existing -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark py-2 fixed-top cx-main-header">
+    
+    <!-- ========================================
+     NAVIGATION 
+======================================== -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark py-1 fixed-top cx-main-header">
         <div class="container">
             <a class="navbar-brand fw-bold" href="javascript:void(0)">
+                <!-- Full Logo -->
                 <img src="assets/images/bexily-new-logo.png" class="navbar-logo full-logo d-lg-none" />
-                <img src="assets/images/mobile-logo.png" class="navbar-logo mobile-logo d-lg-none" style="width:60px; display:none;" />
+
+                <!-- Branding Logo -->
+                <img src="assets/images/mobile-logo.png" class="navbar-logo mobile-logo d-lg-none"
+                    style="width:60px; display:none;" />
+
+                <!-- Desktop logo (as it is) -->
                 <img src="assets/images/bexily-new-logo.png" class="navbar-logo d-none d-lg-block" />
             </a>
-            <a href="#quote" class="btn mobile-call-btn px-5 py-2 d-lg-none mobile-get-started" style="display: none;">Schedule A Call</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileCanvas">
+
+
+            <!-- Schedule A Call (MOBILE/TABLET ONLY) -->
+            <a href="#quote" class="btn mobile-call-btn px-5 py-2 d-lg-none mobile-get-started" style="display: none;">
+                Schedule A Call
+            </a>
+
+            <!-- MOBILE TOGGLER -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileCanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- DESKTOP NAV -->
             <div class="collapse navbar-collapse d-none d-lg-flex">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+
+
+                    <!-- Our Service Dropdown -->
                     <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle fw-semibold" href="#">Our Service</a>
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#">
+                            Our Service
+                        </a>
+
                         <div class="dropdown-menu mega-menu shadow border-0 p-4">
                             <div class="row g-4">
                                 <div class="col-md-6">
+                                     <h6 class="text-left">Development & Solutions</h6> 
                                     <ul class="mega-list">
+                                       
                                         <li><a href="#"><i class="fas fa-angle-right"></i> Web Development</a></li>
                                         <li><a href="#"><i class="fas fa-angle-right"></i> App Development</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Custom Software Development</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Custom Software
+                                                Development</a></li>
                                         <li><a href="#"><i class="fas fa-angle-right"></i> Cloud Solution</a></li>
                                         <li><a href="#"><i class="fas fa-angle-right"></i> DevOps Solution</a></li>
                                         <li><a href="#"><i class="fas fa-angle-right"></i> UI/UX Design Service</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Digital Marketing Service</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Digital Marketing Service</a>
+                                        </li>
                                     </ul>
                                 </div>
+
                                 <div class="col-md-6">
+                                     <h6>Advance Technology</h6> 
                                     <ul class="mega-list">
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Blockchain and Cryptocurrency</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Artificial Intelligence</a></li>
+                                    <!--<li><h6 class="">Emerging Tech</h6></li>-->
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Blockchain and
+                                                Cryptocurrency</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Artificial Intelligence</a>
+                                        </li>
                                         <li><a href="#"><i class="fas fa-angle-right"></i> Machine learning</a></li>
                                         <li><a href="#"><i class="fas fa-angle-right"></i> Data Science</a></li>
                                     </ul>
@@ -62,103 +98,259 @@
                             </div>
                         </div>
                     </li>
+
+                    <!-- Industry Dropdown -->
                     <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle fw-semibold" href="#">Industry</a>
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#">
+                            Industry
+                        </a>
+
                         <div class="dropdown-menu mega-menu shadow border-0 p-4">
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <ul class="mega-list">
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Ecommerce and Retail</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Logistics & Transportation</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Real Estate</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Textile Industry</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Garment Manufacturing</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Finance & Accounting</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Inventory Management</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Export & Documentation</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Multi-Unit Factory</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Procurement</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> HR & Payroll</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Healthcare & Clinics</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Hospitality & Hotels</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Education</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Logistics & Transport</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- ERP Services Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#">
+                            ERP Services
+                        </a>
+
+                        <div class="dropdown-menu mega-menu shadow border-0 p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                         <li><a href="#"><i class="fas fa-angle-right"></i> Custom Development</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> System Integration</a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i>Migration &
+                                                Modernization</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="mega-list">
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Manufacturing</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Education</a></li>
-                                        <li><a href="#"><i class="fas fa-angle-right"></i> Healthcare</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i>Maintenance & Support</a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Industry-Specific Solutions</a></li>
+                                        <li><a href="#"><i class="fas fa-angle-right"></i> Cloud-Based Solutions</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle fw-semibold" href="#">ERP Services</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                    <!--<li class="nav-item dropdown position-static">-->
+                    <!--    <a class="nav-link dropdown-toggle fw-semibold" href="#">-->
+                    <!--        ERP Services-->
+                    <!--    </a>-->
+
+                    <!--    <div class="dropdown-menu mega-menu erp-menu shadow border-0 p-4">-->
+                    <!--        <div class="row g-4">-->
+                    <!--            <div class="col-md-12">-->
+                    <!--                <ul class="mega-list">-->
+                    <!--                    <li><a href="#"><i class="fas fa-angle-right"></i> Custom ERP Software-->
+                    <!--                            Development</a></li>-->
+                    <!--                    <li><a href="#"><i class="fas fa-angle-right"></i> ERP System Integration</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li><a href="#"><i class="fas fa-angle-right"></i> ERP Migration &-->
+                    <!--                            Modernization</a></li>-->
+                    <!--                    <li><a href="#"><i class="fas fa-angle-right"></i> ERP Maintenance & Support</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li><a href="#"><i class="fas fa-angle-right"></i> Industry-Specific ERP-->
+                    <!--                            Solutions</a></li>-->
+                    <!--                    <li><a href="#"><i class="fas fa-angle-right"></i> Cloud-Based ERP Solutions</a>-->
+                    <!--                    </li>-->
+                    <!--                </ul>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</li>-->
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li> -->
+
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-warning rounded-pill px-4" href="#quote">Schedule A Call</a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- OFFCANVAS (MOBILE) - Same as existing -->
+    <!-- ===== OFFCANVAS (MOBILE ONLY) ===== -->
     <div class="offcanvas offcanvas-start bg-dark text-white w-100" tabindex="-1" id="mobileCanvas">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menu</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
+
         <div class="offcanvas-body mobile-menu">
+
+            <!-- Mobile Accordion -->
             <div class="accordion mobile-accordion accordion-flush" id="mobileAccordion">
+
+
+                <!-- ERP Services Accordion -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#erpCollapse">ERP Services</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#erpCollapse">
+                            ERP Services
+                        </button>
                     </h2>
                     <div id="erpCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
                         <div class="accordion-body">
-                            <a href="service.php" class="mobile-submenu-link"><i class="fas fa-chart-line"></i> Complete ERP Solutions</a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Custom ERP Software Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> ERP System Integration
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> ERP Migration & Modernization
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> ERP Maintenance & Support
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Industry-Specific ERP Solutions
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Cloud-Based ERP Solutions
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Our Service Accordion -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapse">Our Service</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#serviceCollapse">
+                            Our Service
+                        </button>
                     </h2>
                     <div id="serviceCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
                         <div class="accordion-body">
+
                             <div class="mobile-submenu-title">Software Solutions</div>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Web Development</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> App Development</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Custom Software Development</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Cloud Solution</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> DevOps Solution</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> UI/UX Design Service</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Digital Marketing Service</a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Web Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> App Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Custom Software Development
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Cloud Solution
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> DevOps Solution
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> UI/UX Design Service
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Digital Marketing Service
+                            </a>
+
                             <div class="mobile-submenu-title">Advance Technology</div>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Blockchain and Cryptocurrency</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Artificial Intelligence</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Machine Learning</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Data Science</a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Blockchain and Cryptocurrency
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Artificial Intelligence
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Machine Learning
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Data Science
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Industry Accordion -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industryCollapse">Industry</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#industryCollapse">
+                            Industry
+                        </button>
                     </h2>
                     <div id="industryCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
                         <div class="accordion-body">
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Ecommerce and Retail</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Logistics & Transportation</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Real Estate</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Manufacturing</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Education</a>
-                            <a href="#" class="mobile-submenu-link"><i class="fas fa-angle-right"></i> Healthcare</a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Ecommerce and Retail
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Logistics & Transportation
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Real Estate
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Manufacturing
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Education
+                            </a>
+                            <a href="#" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Healthcare
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Other Navigation Links -->
             <div class="px-3">
-                <a href="/" class="nav-link-item"><i class="fas fa-home"></i> Home</a>
-                <a href="about.html" class="nav-link-item"><i class="fas fa-info-circle"></i> About</a>
-                <a href="contact.html" class="nav-link-item"><i class="fas fa-envelope"></i> Contact</a>
-                <a href="blog.html" class="nav-link-item"><i class="fas fa-blog"></i> Blog</a>
-                <a href="faq.html" class="nav-link-item"><i class="fas fa-question-circle"></i> FAQ</a>
+                <a href="#home" class="nav-link-item">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="about.html" class="nav-link-item">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#contact" class="nav-link-item">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+                <a href="#blog" class="nav-link-item">
+                    <i class="fas fa-blog"></i> Blog
+                </a>
+                <a href="#faq" class="nav-link-item">
+                    <i class="fas fa-question-circle"></i> FAQ
+                </a>
+
                 <a class="btn btn-warning rounded-pill px-4 btn-mobile" href="#quote">Schedule A Call</a>
             </div>
+
         </div>
     </div>
 
@@ -467,53 +659,77 @@
         </div>
     </section>
 
-    <!-- FOOTER - Same as existing -->
+       <!-- ========================================
+     FOOTER
+======================================== -->
     <footer class="footer footer-bg" id="contact">
         <div class="container">
             <div class="row g-4">
+
+                <!-- Company Info -->
                 <div class="col-lg-4">
                     <div class="footer-brand">
                         <img src="assets/images/bexily-new-logo.png" alt="" srcset="" class="navbar-logo" />
                     </div>
-                    <p class="footer-desc text-white">Kolkata's leading ERP software development company delivering intelligent, scalable solutions tailored to your business needs. Over 10 years of excellence.</p>
+                    <p class="footer-desc text-white-">India's leading ERP software development company delivering
+                        intelligent,
+                        scalable solutions tailored to your business needs. Over 10 years of excellence.</p>
                     <div class="mt-4">
-                        <p class="mb-2 text-white"><i class="bi bi-geo-alt me-2"></i>123 Street, New York, USA</p>
-                        <p class="mb-2 text-white"><i class="bi bi-telephone me-2"></i>+012 345 6789</p>
-                        <p class="mb-0 text-white"><i class="bi bi-envelope me-2"></i>info@example.com</p>
+                        <p class="mb-2 text-dark"><i class="bi bi-geo-alt me-2"></i>A104, Vrundavan Hights Kharvasa–Dindoli Rd, Surat 394210</p>
+                        <p class="mb-2 text-dark"><i class="bi bi-telephone me-2"></i>+91 98049 94398</p>
+                        <p class="mb-0 text-dark"><i class="bi bi-envelope me-2"></i>info@example.com</p>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="social-icons mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+
+                <!-- Quick Links -->
                 <div class="col-lg-2 col-md-4">
                     <h6 class="footer-title">Quick Links</h6>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#industry">Industries</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#home"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-angle-right"></i> Our Services</a></li>
+                        <li><a href="#industry"><i class="fas fa-angle-right"></i> Industries</a></li>
+                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
+
+                <!-- Services -->
                 <div class="col-lg-3 col-md-4">
-                    <h6 class="footer-title">Our Services</h6>
+                    <h6 class="footer-title">ERP Services</h6>
                     <ul class="footer-links">
-                        <li><a href="#">Custom ERP Development</a></li>
-                        <li><a href="#">ERP Integration</a></li>
-                        <li><a href="#">ERP Migration</a></li>
-                        <li><a href="#">Maintenance & Support</a></li>
-                        <li><a href="#">Cloud ERP Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Custom ERP Development</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> ERP Integration</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> ERP Migration</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Maintenance & Support</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Industry-Specific Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Cloud-Based Solutions</a></li>
                     </ul>
                 </div>
+
+                <!-- Industries -->
                 <div class="col-lg-3 col-md-4">
                     <h6 class="footer-title">Industries</h6>
                     <ul class="footer-links">
-                        <li><a href="#">Textile Industry</a></li>
-                        <li><a href="#">Garment Manufacturing</a></li>
-                        <li><a href="#">Finance & Accounting</a></li>
-                        <li><a href="#">Healthcare</a></li>
-                        <li><a href="#">Manufacturing</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Textile Industry</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Garment Manufacturing</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Finance & Accounting</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Healthcare</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> View All Industries</a></li>
                     </ul>
                 </div>
+
             </div>
-            <div class="footer-bottom text-white">
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom text-dark">
                 <p>&copy; 2026 Bexily. All Rights Reserved.</p>
             </div>
         </div>
@@ -521,16 +737,20 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="/assets/js/hero-slider.js"></script>
+    
     <script>
         const header = document.querySelector(".cx-main-header");
         const mobileBtn = document.querySelector(".mobile-get-started");
         const fullLogo = document.querySelector(".full-logo");
         const mobileLogo = document.querySelector(".mobile-logo");
-        let lastScrollTop = 0;
-
+        
         window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
             const isMobile = window.innerWidth < 992;
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            // ===== MOBILE BEHAVIOUR =====
             if (isMobile) {
                 if (scrollTop >= 150) {
                     header.classList.add("cx-header-sticky");
@@ -543,17 +763,51 @@
                     fullLogo.style.display = "block";
                     mobileLogo.style.display = "none";
                 }
-            } else {
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    header.classList.add("cx-header-hidden");
-                    header.classList.remove("cx-header-visible");
+            }
+        
+            // ===== DESKTOP BEHAVIOUR =====
+            else {
+                if (scrollTop >= 120) {
+                    header.classList.add("cx-header-sticky");
                 } else {
-                    header.classList.remove("cx-header-hidden");
-                    header.classList.add("cx-header-visible");
+                    header.classList.remove("cx-header-sticky");
                 }
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+    <script>
+        // FAQ Hover Open Feature with Smooth Transition
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item-pro');
+            let hoverTimeout;
+
+            faqItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    clearTimeout(hoverTimeout);
+
+                    hoverTimeout = setTimeout(() => {
+                        const button = this.querySelector('.accordion-button');
+                        const target = button.getAttribute('data-bs-target');
+                        const collapse = document.querySelector(target);
+
+                        if (button.classList.contains('collapsed')) {
+                            // Smooth open with Bootstrap's built-in animation
+                            const bsCollapse = new bootstrap.Collapse(collapse, {
+                                toggle: true
+                            });
+                        }
+                    }, 200);
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    clearTimeout(hoverTimeout);
+                });
+            });
         });
     </script>
 </body>
+
+
+
 </html>
