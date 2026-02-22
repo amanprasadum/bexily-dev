@@ -1,4 +1,4 @@
-     /* ========================================
+/* ========================================
    ABOUT PAGE STYLES (abt- prefix)
 ======================================== */
 
@@ -117,21 +117,14 @@
 }
 
 /* ========================================
-   ABOUT COMPANY SECTION
+   WHO WE ARE / COMPANY SECTION
 ======================================== */
 .abt-company-section {
     padding: 100px 0;
     background: #ffffff;
 }
 
-.abt-company-image-wrapper {
-    position: relative;
-}
-
-.abt-company-img {
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-}
+/* company image wrapper moved below with height fix */
 
 .abt-experience-badge {
     position: absolute;
@@ -192,48 +185,135 @@
     margin-bottom: 1.5rem;
 }
 
-.abt-company-features {
-    margin-top: 2rem;
+/* Services Strip */
+.abt-services-strip {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
 }
 
-.abt-feature-item {
+.abt-services-strip-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.abt-service-tag {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    transition: all 0.2s ease;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
-.abt-feature-icon {
-    width: 60px;
-    height: 60px;
+.abt-service-tag:hover {
+    background: rgba(30, 64, 175, 0.06);
+    border-color: #1e40af;
+    color: #1e40af;
+}
+
+.abt-service-tag i {
+    color: #1e40af;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Mission & Vision Section */
+.abt-mv-section {
+    padding: 0 0 100px;
+    background: #ffffff;
+}
+
+.abt-mv-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 60%);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.abt-mv-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.1);
+    border-color: #1e40af;
+}
+
+.abt-mv-icon {
+    width: 64px;
+    height: 64px;
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    border-radius: 15px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 }
 
-.abt-feature-icon i {
-    font-size: 24px;
+.abt-mv-icon i {
+    font-size: 28px;
     color: #ffffff;
 }
 
-.abt-feature-title {
-    font-size: 1.25rem;
+.abt-mv-title {
+    font-size: 1.5rem;
     font-weight: 700;
     color: #0f172a;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.abt-feature-text {
+.abt-mv-text {
     font-size: 15px;
     color: #64748b;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 0;
 }
 
+/* Fix company image height matching */
+.abt-company-image-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.abt-company-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 380px;
+}
+
+/* Responsive for MV section */
+@media (max-width: 767px) {
+    .abt-mv-card {
+        padding: 25px;
+        flex-direction: column;
+    }
+    .abt-mv-section {
+        padding: 0 0 60px;
+    }
+    .abt-services-strip {
+        padding: 20px;
+    }
+}
+
 /* ========================================
-   VALUES SECTION
+   WHY CHOOSE BEXILY SECTION
 ======================================== */
 .abt-values-section {
     padding: 100px 0;
@@ -246,6 +326,7 @@
     margin-top: 1rem;
 }
 
+/* Default card - centered (for future 6-col grids etc) */
 .abt-value-card {
     background: #ffffff;
     padding: 40px 30px;
@@ -256,6 +337,15 @@
     height: 100%;
 }
 
+/* Horizontal variant for Why Choose section */
+.abt-value-card--horizontal {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    text-align: left;
+    padding: 30px;
+}
+
 .abt-value-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
@@ -263,15 +353,21 @@
 }
 
 .abt-value-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    border-radius: 50%;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    flex-shrink: 0;
     transition: all 0.3s ease;
+}
+
+.abt-value-card--horizontal .abt-value-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
 }
 
 .abt-value-card:hover .abt-value-icon {
@@ -279,221 +375,173 @@
 }
 
 .abt-value-icon i {
-    font-size: 32px;
+    font-size: 28px;
     color: #ffffff;
 }
 
+.abt-value-card--horizontal .abt-value-icon i {
+    font-size: 22px;
+}
+
+.abt-value-body {
+    flex: 1;
+}
+
 .abt-value-title {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #0f172a;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .abt-value-desc {
-    font-size: 15px;
+    font-size: 14px;
     color: #64748b;
     line-height: 1.7;
     margin-bottom: 0;
 }
 
 /* ========================================
-   TEAM SECTION
+   INDUSTRIES SECTION
 ======================================== */
-.abt-team-section {
+.abt-industries-section {
     padding: 100px 0;
     background: #ffffff;
 }
 
-.abt-team-card {
+.abt-industry-card {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 30px 15px;
     text-align: center;
     transition: all 0.3s ease;
+    cursor: default;
 }
 
-.abt-team-image {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
+.abt-industry-card:hover {
+    background: #1e40af;
+    border-color: #1e40af;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.2);
 }
 
-.abt-team-image img {
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-.abt-team-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(30, 64, 175, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.abt-team-card:hover .abt-team-overlay {
-    opacity: 1;
-}
-
-.abt-team-card:hover .abt-team-image img {
-    transform: scale(1.1);
-}
-
-.abt-team-social {
-    display: flex;
-    gap: 15px;
-}
-
-.abt-social-link {
-    width: 45px;
-    height: 45px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1e40af;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.abt-social-link:hover {
-    background: #fbbf24;
-    color: #0f172a;
-    transform: translateY(-3px);
-}
-
-.abt-social-link i {
-    font-size: 18px;
-}
-
-.abt-team-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 0.25rem;
-}
-
-.abt-team-role {
-    font-size: 14px;
-    color: #1e40af;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-
-/* ========================================
-   JOURNEY/TIMELINE SECTION
-======================================== */
-.abt-journey-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
-}
-
-.abt-timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-.abt-timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, #1e40af 0%, #3b82f6 100%);
-    transform: translateX(-50%);
-}
-
-.abt-timeline-item {
-    position: relative;
-    margin-bottom: 60px;
-    display: flex;
-    align-items: center;
-}
-
-.abt-timeline-item:nth-child(odd) {
-    flex-direction: row;
-}
-
-.abt-timeline-item:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.abt-timeline-year {
-    width: 45%;
-    text-align: right;
-    padding-right: 50px;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #1e40af;
-}
-
-.abt-timeline-item:nth-child(even) .abt-timeline-year {
-    text-align: left;
-    padding-left: 50px;
-    padding-right: 0;
-}
-
-.abt-timeline-content {
-    width: 45%;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.abt-timeline-icon {
-    width: 60px;
-    height: 60px;
+.abt-industry-icon {
+    width: 64px;
+    height: 64px;
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 4px solid #f8fafc;
-    z-index: 2;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
 }
 
-.abt-timeline-item:nth-child(odd) .abt-timeline-icon {
-    left: auto;
-    right: -80px;
+.abt-industry-card:hover .abt-industry-icon {
+    background: rgba(255,255,255,0.2);
 }
 
-.abt-timeline-item:nth-child(even) .abt-timeline-icon {
-    right: auto;
-    left: -80px;
-}
-
-.abt-timeline-icon i {
-    font-size: 24px;
+.abt-industry-icon i {
+    font-size: 26px;
     color: #ffffff;
 }
 
-.abt-timeline-title {
-    font-size: 1.25rem;
+.abt-industry-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.abt-industry-card:hover .abt-industry-name {
+    color: #ffffff;
+}
+
+/* ========================================
+   WORKING PROCESS SECTION
+======================================== */
+.abt-process-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+}
+
+.abt-process-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #e2e8f0;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.abt-process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #1e40af;
+}
+
+.abt-process-step {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(30, 64, 175, 0.1);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.abt-process-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+}
+
+.abt-process-icon i {
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.abt-process-title {
+    font-size: 1.1rem;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 0.75rem;
 }
 
-.abt-timeline-desc {
-    font-size: 15px;
+.abt-process-desc {
+    font-size: 14px;
     color: #64748b;
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 0;
+}
+
+/* Arrow connector between process cards */
+.abt-process-arrow {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: #1e40af;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.abt-process-arrow i {
+    font-size: 16px;
+    color: #ffffff;
 }
 
 /* ========================================
@@ -568,8 +616,8 @@
 
     .abt-company-section,
     .abt-values-section,
-    .abt-team-section,
-    .abt-journey-section,
+    .abt-industries-section,
+    .abt-process-section,
     .abt-cta-section {
         padding: 80px 0;
     }
@@ -589,34 +637,12 @@
         font-size: 2rem;
     }
 
-    .abt-timeline::before {
-        left: 30px;
-    }
-
-    .abt-timeline-item {
-        flex-direction: row !important;
-    }
-
-    .abt-timeline-year {
-        width: 100px;
-        text-align: left;
-        padding-left: 80px;
-        padding-right: 0 !important;
-        font-size: 1.5rem;
-    }
-
-    .abt-timeline-content {
-        width: calc(100% - 100px);
-        margin-left: auto;
-    }
-
-    .abt-timeline-icon {
-        left: 30px !important;
-        right: auto !important;
-    }
-
     .abt-cta-title {
         font-size: 2rem;
+    }
+
+    .abt-process-arrow {
+        display: none;
     }
 }
 
@@ -643,8 +669,8 @@
 
     .abt-company-section,
     .abt-values-section,
-    .abt-team-section,
-    .abt-journey-section,
+    .abt-industries-section,
+    .abt-process-section,
     .abt-cta-section {
         padding: 60px 0;
     }
@@ -681,42 +707,8 @@
         font-size: 20px;
     }
 
-    .abt-value-card {
-        padding: 30px 20px;
-    }
-
-    .abt-value-icon {
-        width: 70px;
-        height: 70px;
-    }
-
-    .abt-value-icon i {
-        font-size: 28px;
-    }
-
-    .abt-timeline-year {
-        width: 80px;
-        padding-left: 60px;
-        font-size: 1.25rem;
-    }
-
-    .abt-timeline-content {
-        width: calc(100% - 80px);
+    .abt-value-card--horizontal {
         padding: 20px;
-    }
-
-    .abt-timeline-icon {
-        width: 50px;
-        height: 50px;
-        left: 20px !important;
-    }
-
-    .abt-timeline-icon i {
-        font-size: 20px;
-    }
-
-    .abt-timeline-title {
-        font-size: 1.1rem;
     }
 
     .abt-cta-wrapper {
@@ -736,5 +728,22 @@
     .abt-cta-btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .abt-industry-card {
+        padding: 20px 10px;
+    }
+
+    .abt-industry-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .abt-industry-icon i {
+        font-size: 22px;
+    }
+
+    .abt-process-card {
+        padding: 25px 20px;
     }
 }
