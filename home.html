@@ -15,15 +15,756 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-   
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <style>
+        /* ========================================
+   CITIES WE SERVE SECTION (cities- prefix)
+======================================== */
+
+.cities-section {
+    padding: 100px 0;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.cities-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+.cities-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.cities-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.cities-highlight {
+    color: #1e40af;
+}
+
+.cities-subtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ========================================
+   FEATURED CARDS (Gujarat & Kolkata)
+======================================== */
+.cities-featured-card {
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cities-featured-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* Gujarat card - warm deep blue */
+.cities-gujarat {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1e40af 100%);
+}
+
+/* Kolkata card - rich teal-navy */
+.cities-kolkata {
+    background: linear-gradient(135deg, #0f172a 0%, #164e63 60%, #0e7490 100%);
+}
+
+/* Glowing background blob */
+.cities-featured-glow {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.cities-gujarat .cities-featured-glow {
+    background: radial-gradient(circle, #fbbf24, transparent);
+}
+
+.cities-kolkata .cities-featured-glow {
+    background: radial-gradient(circle, #22d3ee, transparent);
+}
+
+.cities-featured-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cities-featured-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.cities-state-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cities-featured-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.cities-amp {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cities-featured-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.cities-featured-stats {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cities-feat-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.cities-feat-stat i {
+    font-size: 15px;
+    color: #fbbf24;
+}
+
+.cities-kolkata .cities-feat-stat i {
+    color: #22d3ee;
+}
+
+/* Floating map pin */
+.cities-featured-map-pin {
+    position: absolute;
+    bottom: 30px;
+    right: 35px;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.06);
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ========================================
+   OTHER CITY CARDS
+======================================== */
+.cities-other-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+}
+
+.cities-city-card {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.cities-city-card:hover {
+    border-color: #1e40af;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(30, 64, 175, 0.1);
+}
+
+.cities-city-icon {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.cities-city-card:hover .cities-city-icon {
+    transform: scale(1.1);
+}
+
+.cities-city-icon i {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.cities-city-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.cities-city-state {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* ========================================
+   BOTTOM STRIP
+======================================== */
+.cities-bottom-strip {
+    margin-top: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cities-bottom-text {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.cities-bottom-text i {
+    color: #1e40af;
+}
+
+.cities-bottom-text strong {
+    color: #0f172a;
+}
+
+.cities-bottom-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cities-bottom-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+    color: #ffffff;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 991px) {
+    .cities-section {
+        padding: 80px 0;
+    }
+
+    .cities-title {
+        font-size: 2rem;
+    }
+
+    .cities-featured-card {
+        min-height: 220px;
+        padding: 30px;
+    }
+
+    .cities-featured-name {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .cities-section {
+        padding: 60px 0;
+    }
+
+    .cities-title {
+        font-size: 1.75rem;
+    }
+
+    .cities-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .cities-featured-card {
+        padding: 25px;
+        min-height: auto;
+    }
+
+    .cities-featured-name {
+        font-size: 1.5rem;
+    }
+
+    .cities-featured-desc {
+        font-size: 13px;
+    }
+
+    .cities-featured-stats {
+        gap: 1rem;
+    }
+
+    .cities-city-card {
+        padding: 18px 12px;
+    }
+
+    .cities-city-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .cities-city-icon i {
+        font-size: 18px;
+    }
+
+    .cities-city-name {
+        font-size: 13px;
+    }
+
+    .cities-bottom-strip {
+        padding: 16px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cities-bottom-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+    </style>
 
 </head>
 
 <body>
-    
-<?php include('includes/header.php'); ?>
+
+    <!-- ========================================
+     NAVIGATION 
+======================================== -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark py-1 fixed-top cx-main-header">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="javascript:void(0)">
+                <!-- Full Logo -->
+                <img src="assets/images/bexily-new-logo.png" class="navbar-logo full-logo d-lg-none" />
+
+                <!-- Branding Logo -->
+                <img src="assets/images/mobile-logo.png" class="navbar-logo mobile-logo d-lg-none"
+                    style="width:60px; display:none;" />
+
+                <!-- Desktop logo (as it is) -->
+                <img src="assets/images/bexily-new-logo.png" class="navbar-logo d-none d-lg-block" />
+            </a>
+
+
+            <!-- Schedule A Call (MOBILE/TABLET ONLY) -->
+            <a href="#quote" class="btn mobile-call-btn px-5 py-2 d-lg-none mobile-get-started" style="display: none;">
+                Schedule A Call
+            </a>
+
+            <!-- MOBILE TOGGLER -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileCanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- DESKTOP NAV -->
+            <div class="collapse navbar-collapse d-none d-lg-flex">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+
+
+                    <!-- Our Service Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="javascript:void(0)">
+                            Our Service
+                        </a>
+
+                        <div class="dropdown-menu mega-menu shadow border-0 p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h6 class="text-left">Development & Solutions</h6>
+                                    <ul class="mega-list">
+
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Web
+                                                Development</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> App
+                                                Development</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Custom
+                                                Software
+                                                Development</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Cloud
+                                                Solution</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> DevOps
+                                                Solution</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> UI/UX Design
+                                                Service</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Digital
+                                                Marketing Service</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6>Advance Technology</h6>
+                                    <ul class="mega-list">
+                                        <!--<li><h6 class="">Emerging Tech</h6></li>-->
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Blockchain
+                                                and
+                                                Cryptocurrency</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Artificial
+                                                Intelligence</a>
+                                        </li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Machine
+                                                learning</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Data
+                                                Science</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Industry Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="javascript:void(0)">
+                            Industry
+                        </a>
+
+                        <div class="dropdown-menu mega-menu shadow border-0 p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Textile
+                                                Industry</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Garment
+                                                Manufacturing</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Finance &
+                                                Accounting</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Inventory
+                                                Management</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Export &
+                                                Documentation</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Multi-Unit
+                                                Factory</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i>
+                                                Procurement</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> HR &
+                                                Payroll</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Healthcare &
+                                                Clinics</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Hospitality
+                                                & Hotels</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i>
+                                                Education</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Logistics &
+                                                Transport</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- ERP Services Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="javascript:void(0)">
+                            ERP Services
+                        </a>
+
+                        <div class="dropdown-menu mega-menu shadow border-0 p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Custom
+                                                Development</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> System
+                                                Integration</a>
+                                        </li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i>Migration &
+                                                Modernization</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="mega-list">
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i>Maintenance &
+                                                Support</a>
+                                        </li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i>
+                                                Industry-Specific Solutions</a></li>
+                                        <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Cloud-Based
+                                                Solutions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="nav-item dropdown position-static">-->
+                    <!--    <a class="nav-link dropdown-toggle fw-semibold" href="javascript:void(0)">-->
+                    <!--        ERP Services-->
+                    <!--    </a>-->
+
+                    <!--    <div class="dropdown-menu mega-menu erp-menu shadow border-0 p-4">-->
+                    <!--        <div class="row g-4">-->
+                    <!--            <div class="col-md-12">-->
+                    <!--                <ul class="mega-list">-->
+                    <!--                    <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Custom ERP Software-->
+                    <!--                            Development</a></li>-->
+                    <!--                    <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> ERP System Integration</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> ERP Migration &-->
+                    <!--                            Modernization</a></li>-->
+                    <!--                    <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> ERP Maintenance & Support</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Industry-Specific ERP-->
+                    <!--                            Solutions</a></li>-->
+                    <!--                    <li><a href="javascript:void(0)"><i class="fas fa-angle-right"></i> Cloud-Based ERP Solutions</a>-->
+                    <!--                    </li>-->
+                    <!--                </ul>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</li>-->
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li> -->
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-warning rounded-pill px-4" href="contact-us.html">Schedule A Call</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== OFFCANVAS (MOBILE ONLY) ===== -->
+    <div class="offcanvas offcanvas-start bg-dark text-white w-100" tabindex="-1" id="mobileCanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body mobile-menu">
+
+            <!-- Mobile Accordion -->
+            <div class="accordion mobile-accordion accordion-flush" id="mobileAccordion">
+
+
+                <!-- ERP Services Accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#erpCollapse">
+                            ERP Services
+                        </button>
+                    </h2>
+                    <div id="erpCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                        <div class="accordion-body">
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Custom ERP Software Development
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> ERP System Integration
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> ERP Migration & Modernization
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> ERP Maintenance & Support
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Industry-Specific ERP Solutions
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Cloud-Based ERP Solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Service Accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#serviceCollapse">
+                            Our Service
+                        </button>
+                    </h2>
+                    <div id="serviceCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                        <div class="accordion-body">
+
+                            <div class="mobile-submenu-title">Software Solutions</div>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Web Development
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> App Development
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Custom Software Development
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Cloud Solution
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> DevOps Solution
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> UI/UX Design Service
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Digital Marketing Service
+                            </a>
+
+                            <div class="mobile-submenu-title">Advance Technology</div>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Blockchain and Cryptocurrency
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Artificial Intelligence
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Machine Learning
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Data Science
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Accordion -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#industryCollapse">
+                            Industry
+                        </button>
+                    </h2>
+                    <div id="industryCollapse" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+                        <div class="accordion-body">
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Ecommerce and Retail
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Logistics & Transportation
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Real Estate
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Manufacturing
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Education
+                            </a>
+                            <a href="javascript:void(0)" class="mobile-submenu-link">
+                                <i class="fas fa-angle-right"></i> Healthcare
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Navigation Links -->
+            <div class="px-3">
+                <a href="home.html" class="nav-link-item">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="about.html" class="nav-link-item">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="contact-us.html" class="nav-link-item">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+                <a href="javascript:void(0)" class="nav-link-item">
+                    <i class="fas fa-blog"></i> Blog
+                </a>
+                <a href="javascript:void(0)" class="nav-link-item">
+                    <i class="fas fa-question-circle"></i> FAQ
+                </a>
+
+                <a class="btn btn-warning rounded-pill px-4 btn-mobile" href="#quote">Schedule A Call</a>
+            </div>
+
+        </div>
+    </div>
 
     <!-- ========================================
      NEW HERO SECTION 
