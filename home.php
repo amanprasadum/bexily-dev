@@ -22,7 +22,7 @@
 </head>
 
 <body>
-
+<?php include('/includes/header.php') ?>
 
     <!-- ========================================
      NEW HERO SECTION 
