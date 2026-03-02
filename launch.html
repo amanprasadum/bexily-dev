@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bexily - Custom ERP Software Development Company</title>
+
+  <!-- Primary meta -->
+  <meta name="description" content="Bexily — Custom ERP software development company  Building tailored ERP systems for manufacturing, textiles, and distribution.">
+  <meta property="og:title" content="Bexily - Custom ERP Software Development Company in Kolkata">
+  <meta property="og:description" content="Custom ERP solutions built for growing businesses. Coming soon from Bexily.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    :root{
+      --bg1: #071021;
+      --bg2: #0b2540;
+      --accent: #6c63ff;
+      --muted: #98a0b3;
+    }
+    html,body{height:100%;font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body{background: linear-gradient(120deg,var(--bg1),var(--bg2));color:#eef2ff;display:flex;align-items:center;justify-content:center;margin:0;padding:2rem}
+
+    /* floating circles */
+    .bg-blob{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+    .bg-blob span{position:absolute;filter:blur(40px);opacity:0.25;mix-blend-mode:screen}
+    .b1{width:420px;height:420px;background:radial-gradient(circle at 30% 30%, rgba(108,99,255,0.9), rgba(108,99,255,0.1));left:-80px;top:-80px}
+    .b2{width:320px;height:320px;background:radial-gradient(circle at 70% 70%, rgba(255,102,102,0.12), rgba(255,102,102,0));right:-60px;bottom:-60px}
+
+    .card-coming{position:relative;z-index:2;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.06);border-radius:18px;box-shadow:0 10px 40px rgba(2,6,23,0.6);padding:2.25rem}
+
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#3ec7ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:20px}
+
+    h1{font-weight:700;margin-bottom:0.2rem;font-size:1.6rem}
+    p.lead{color:var(--muted);margin-bottom:1rem;font-size:0.98rem}
+
+    /* Countdown */
+    .countdown{display:flex;gap:12px}
+    .countdown .unit{background:rgba(255,255,255,0.04);padding:14px 18px;border-radius:10px;min-width:80px;text-align:center;flex:1}
+    .unit .num{font-weight:700;font-size:1.2rem}
+    .unit .label{font-size:0.75rem;color:var(--muted)}
+
+    /* Subscribe form */
+    .subscribe .form-control{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);color:#fff;padding:0.75rem 0.9rem;font-size:0.95rem}
+    .subscribe .btn-primary{background:linear-gradient(90deg,var(--accent),#3ec7ff);border:none;padding:0.75rem 1rem;font-size:0.95rem}
+
+    .social a{color:rgba(255,255,255,0.85);margin-right:10px;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);display:inline-flex;align-items:center}
+
+    footer.small{color:var(--muted);margin-top:18px}
+
+    /* Mobile specific adjustments for better touch targets and spacing */
+    @media (max-width:768px){
+      body{padding:1.25rem}
+      .card-coming{padding:1.25rem;border-radius:14px}
+      h1{font-size:1.35rem}
+      p.lead{font-size:0.95rem}
+      .logo{width:64px;height:64px;font-size:22px}
+      .b1{width:320px;height:320px;left:-100px;top:-100px;filter:blur(32px);opacity:0.2}
+      .b2{width:260px;height:260px;right:-80px;bottom:-80px;filter:blur(28px);opacity:0.18}
+
+      /* Make countdown stack vertically on small screens with larger tappable areas */
+      .countdown{flex-direction:row;flex-wrap:wrap}
+      .countdown .unit{min-width:48%;margin-bottom:8px;padding:12px 14px}
+
+      /* Make form full width and larger buttons */
+      .subscribe .col-sm-8,.subscribe .col-sm-4{flex:0 0 100%;max-width:100%}
+      .subscribe .btn-primary{padding:0.9rem;font-size:1rem}
+      .subscribe .form-control{font-size:1rem}
+    }
+
+    @media (max-width:480px){
+      .logo{width:72px;height:72px;font-size:24px}
+      .countdown .unit{min-width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px}
+      .unit .num{font-size:1.15rem}
+      .card-coming{padding:1rem}
+      h1{font-size:1.15rem}
+      p.lead{font-size:0.92rem}
+      .bg-blob span{filter:blur(30px)}
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="bg-blob" aria-hidden="true">
+    <span class="b1"></span>
+    <span class="b2"></span>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="p-4 p-sm-5 card-coming">
+
+          <div class="d-flex justify-content-between align-items-center mb-3" style="margin-top:8px">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">B</div>
+    <div class="ms-3">
+      <div style="font-size:1rem;font-weight:700">Bexily</div>
+      <div class="small" style="color:var(--muted)">Custom ERP Solutions</div>
+    </div>
+  </div>
+  <div class="text-end small" style="color:var(--muted)">
+    <div>Estimated launch</div>
+    <div class="fw-bold" id="estDate" style="font-size:.95rem">Mar 01, 2026</div>
+  </div>
+</div>
+
+<h1>We're building something great.</h1>
+          <p class="lead">Bexily is crafting custom ERP solutions for manufacturers, textile units and distributors across India and beyond. Sign up to get updates and early access.</p>
+
+          <div class="mb-4 countdown" role="timer" aria-live="polite">
+            <div class="unit">
+              <div class="num" id="days">0</div>
+              <div class="label">Days</div>
+            </div>
+            <div class="unit">
+              <div class="num" id="hours">0</div>
+              <div class="label">Hours</div>
+            </div>
+            <div class="unit">
+              <div class="num" id="minutes">0</div>
+              <div class="label">Minutes</div>
+            </div>
+            <div class="unit">
+              <div class="num" id="seconds">0</div>
+              <div class="label">Seconds</div>
+            </div>
+          </div>
+
+          <form class="row g-2 subscribe" id="subscribeForm" novalidate>
+            <div class="col-sm-8 col-12">
+              <label class="visually-hidden" for="emailInput">Email address</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="col-sm-4 col-12 d-grid">
+              <button class="btn btn-primary" id="subscribeBtn" type="submit">Notify Me</button>
+            </div>
+          </form>
+
+          <div class="text-center mt-4">
+            <div class="d-flex justify-content-center align-items-center gap-3 mb-2">
+              <a href="#" aria-label="Bexily on LinkedIn" class="social"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Bexily on Twitter" class="social"><i class="bi bi-twitter"></i></a>
+              <a href="#" aria-label="Bexily on Github" class="social"><i class="bi bi-github"></i></a>
+              <a href="mailto:info@bexily.com" class="small ms-2" style="color:var(--muted);text-decoration:none">info@bexily.com</a>
+            </div>
+            <div class="small" style="color:var(--muted)">© <span id="year"></span> Bexily. All rights reserved.</div>
+          </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // -----------------------------
+    // Configuration
+    // Set target launch date (YYYY, M-1, D, HH, MM, SS) in local timezone (Asia/Kolkata)
+    // Change this value to your real launch date
+    var targetDate = new Date(2026, 2, 1, 10, 0, 0); // March 1, 2026 10:00 local
+
+    // Don't use const/let or DOMContentLoaded per user's preference; script runs at bottom so DOM is ready
+    var elDays = document.getElementById('days');
+    var elHours = document.getElementById('hours');
+    var elMinutes = document.getElementById('minutes');
+    var elSeconds = document.getElementById('seconds');
+    var estDate = document.getElementById('estDate');
+    var yearEl = document.getElementById('year');
+
+    // show configured date in friendly format
+    estDate.textContent = targetDate.toLocaleString(undefined, { year:'numeric', month:'short', day:'numeric' });
+    yearEl.textContent = new Date().getFullYear();
+
+    function updateCountdown(){
+      var now = new Date();
+      var diff = targetDate - now;
+      if(diff <= 0){
+        elDays.textContent = '0';
+        elHours.textContent = '0';
+        elMinutes.textContent = '0';
+        elSeconds.textContent = '0';
+        return;
+      }
+      var s = Math.floor(diff/1000);
+      var days = Math.floor(s/86400);
+      s -= days*86400;
+      var hours = Math.floor(s/3600);
+      s -= hours*3600;
+      var minutes = Math.floor(s/60);
+      var seconds = s - minutes*60;
+
+      elDays.textContent = days;
+      elHours.textContent = hours;
+      elMinutes.textContent = minutes;
+      elSeconds.textContent = seconds;
+    }
+
+    // start timer
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Simple subscribe handling (no backend). Replace with real endpoint if you have one.
+    var form = document.getElementById('subscribeForm');
+    var emailInput = document.getElementById('emailInput');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!emailInput.checkValidity()){
+        emailInput.classList.add('is-invalid');
+        return;
+      }
+      emailInput.classList.remove('is-invalid');
+      // Here you can send a fetch() to your server. For now we show a success state.
+      var btn = document.getElementById('subscribeBtn');
+      btn.innerHTML = '<i class="bi bi-check-lg"></i> Subscribed';
+      btn.disabled = true;
+
+      // Optionally store to localStorage to persist the state
+      try{ localStorage.setItem('bexily-sub', emailInput.value); }catch(err){}
+    });
+
+    // if user already subscribed, reflect button state
+    try{
+      var saved = localStorage.getItem('bexily-sub');
+      if(saved){
+        document.getElementById('subscribeBtn').innerHTML = '<i class="bi bi-check-lg"></i> Subscribed';
+        document.getElementById('subscribeBtn').disabled = true;
+        emailInput.value = saved;
+      }
+    }catch(err){}
+
+  </script>
+
+</body>
+</html>
