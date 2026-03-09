@@ -385,103 +385,110 @@
     transform: scale(1.05);
 }
 
+
 /* ========================================
-   SCHEDULE A CALL BUTTON — DESKTOP
+   SCHEDULE A CALL — RUNNING BORDER BUTTON
 ======================================== */
+
+/* Remove Bootstrap btn-warning defaults */
 .nav-item .btn.btn-warning.rounded-pill {
     all: unset;
     cursor: pointer;
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 11px 22px;
+    display: inline-block;
+    padding: 11px 26px;
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: 0.3px;
-    color: #fff !important;
-    background: linear-gradient(135deg, #f59e0b 0%, #ef6c00 60%, #f59e0b 100%);
-    background-size: 200% auto;
-    border-radius: 100px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0a257c;
+    background: transparent;
+    border-radius: 6px;
     text-decoration: none;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
-    transition: background-position 0.5s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    animation: sac-pulse 2.8s ease-in-out infinite;
+    transition: color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Shimmer sweep */
-.nav-item .btn.btn-warning.rounded-pill::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.38) 50%,
-        transparent 100%
-    );
-    transform: skewX(-20deg);
-    animation: sac-shimmer 3.2s ease-in-out infinite;
-    pointer-events: none;
-}
-
-/* Phone icon */
-.nav-item .btn.btn-warning.rounded-pill::after {
-    content: '📞';
-    font-size: 13px;
-    display: inline-block;
-    animation: sac-ring 3.5s ease-in-out infinite;
-}
-
-/* Hover */
+/* Hover — fill with brand blue */
 .nav-item .btn.btn-warning.rounded-pill:hover {
-    background-position: right center;
+    color: #ffffff;
+    background: #0a257c;
     box-shadow:
-        0 6px 24px rgba(245, 158, 11, 0.65),
-        0 0 0 4px rgba(245, 158, 11, 0.18);
-    transform: translateY(-2px) scale(1.04);
-    color: #fff !important;
+        0 0 8px rgba(10, 37, 124, 0.4),
+        0 0 24px rgba(10, 37, 124, 0.25),
+        0 0 50px rgba(10, 37, 124, 0.15);
     text-decoration: none;
 }
 
-/* Click */
-.nav-item .btn.btn-warning.rounded-pill:active {
-    transform: translateY(0px) scale(0.97);
-    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.4);
+/* ---- The 4 running border spans ---- */
+
+/* TOP — left → right */
+.nav-item .btn.btn-warning.rounded-pill span:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0a257c);
+    animation: sac-top 2s linear infinite;
 }
 
-/* Pulsing glow ring */
-@keyframes sac-pulse {
-    0%, 100% {
-        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
-    }
-    50% {
-        box-shadow:
-            0 4px 22px rgba(245, 158, 11, 0.75),
-            0 0 0 5px rgba(245, 158, 11, 0.12);
-    }
+/* RIGHT — top → bottom */
+.nav-item .btn.btn-warning.rounded-pill span:nth-child(2) {
+    position: absolute;
+    display: block;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #1e88e5);
+    animation: sac-right 2s linear infinite;
+    animation-delay: 0.5s;
 }
 
-/* Shimmer sweep */
-@keyframes sac-shimmer {
-    0%          { left: -75%; opacity: 0; }
-    8%          { opacity: 1; }
-    55%         { left: 130%; opacity: 1; }
-    56%, 100%   { left: 130%; opacity: 0; }
+/* BOTTOM — right → left */
+.nav-item .btn.btn-warning.rounded-pill span:nth-child(3) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #0a257c);
+    animation: sac-bottom 2s linear infinite;
+    animation-delay: 1s;
 }
 
-/* Phone ring shake */
-@keyframes sac-ring {
-    0%, 70%, 100% { transform: rotate(0deg); }
-    72%           { transform: rotate(-18deg); }
-    74%           { transform: rotate(18deg); }
-    76%           { transform: rotate(-14deg); }
-    78%           { transform: rotate(14deg); }
-    80%           { transform: rotate(-8deg); }
-    82%           { transform: rotate(8deg); }
-    84%           { transform: rotate(0deg); }
+/* LEFT — bottom → top */
+.nav-item .btn.btn-warning.rounded-pill span:nth-child(4) {
+    position: absolute;
+    display: block;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #1e88e5);
+    animation: sac-left 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes sac-top {
+    0%       { left: -100%; }
+    50%, 100% { left: 100%; }
+}
+
+@keyframes sac-right {
+    0%       { top: -100%; }
+    50%, 100% { top: 100%; }
+}
+
+@keyframes sac-bottom {
+    0%       { right: -100%; }
+    50%, 100% { right: 100%; }
+}
+
+@keyframes sac-left {
+    0%       { bottom: -100%; }
+    50%, 100% { bottom: 100%; }
 }
