@@ -1,0 +1,424 @@
+/* ========================================
+   NAVIGATION STYLES 
+======================================== */
+.navbar-logo {
+    width: 173px;
+}
+
+/*.footer-brand img.navbar-logo {*/
+/*    background-color: #f3f3f3;*/
+/*    padding: 6px 20px;*/
+/*    width: 180px;*/
+/*    border-radius: 9px;*/
+/*}*/
+
+.top-bar {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.top-bar a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.top-bar a:hover {
+    color: var(--accent-yellow);
+}
+
+.navbar {
+    background-color: #f3f3f3 !important;
+    padding: 15px 0;
+}
+
+.navbar-toggler {
+    /* background-color: #000 !important; */
+
+    background-color: #198754 !important;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: #1e40af !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 15px;
+    color: #000 !important;
+    padding: 8px 16px !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-yellow) !important;
+}
+
+/* ===== NAVBAR SMOOTH TOP ENTRY ON SCROLL ===== */
+/* ===== NAVBAR ENTRY ANIMATION ===== */
+.cx-main-header {
+    z-index: 999;
+    border-bottom: 1px solid #e3e3e3;
+    transition: transform 0.45s ease, box-shadow 0.3s ease;
+}
+
+/* Desktop - animate on scroll */
+@media (min-width: 992px) {
+    .cx-main-header {
+        transform: translateY(0);
+    }
+
+    .cx-header-hidden {
+        transform: translateY(-100%);
+    }
+
+    .cx-header-visible {
+        transform: translateY(0);
+    }
+
+
+}
+
+/* Mobile sticky behavior (unchanged) */
+@media (max-width: 991px) {
+    .cx-header-sticky {
+        animation: cx-slide-from-top 0.45s ease forwards;
+    }
+
+    @keyframes cx-slide-from-top {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}
+.cx-header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    animation: cx-slide-from-top 0.4s ease forwards;
+}
+
+@keyframes cx-slide-from-top {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+
+/* Desktop Mega Menu */
+.mega-menu {
+    width: 620px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 32px;
+    background: var(--white);
+    border: none;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 20px !important;
+}
+
+.mega-menu.erp-menu {
+    width: 380px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .mega-menu {
+        width: 495px;
+        left: 54%;
+    }
+
+    .mega-menu.erp-menu {
+        width: 340px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .mega-menu {
+        width: 521px;
+        left: 61%;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1800px) {
+    .mega-menu {
+        width: 523px;
+        left: 66%;
+    }
+}
+
+.mega-menu h6 {
+   font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    /* margin-bottom: 20px; */
+    color: #0a257c;
+    letter-spacing: -0.3px;
+    padding-left: 9px;
+}
+
+.mega-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-list li {
+    margin-bottom: 2px;
+}
+
+.mega-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px 6px;
+    transition: all 0.25s ease;
+    border-radius: 6px;
+}
+
+.mega-list a:hover {
+    color: var(--primary-blue);
+    background-color: #e8f0f9;
+    padding-left: 12px;
+}
+
+.mega-list a i {
+    width: 16px;
+    margin-right: 10px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.mega-list a:hover i {
+    color: var(--primary-blue);
+}
+
+/* ERP Menu Item */
+.erp-menu-item {
+    display: block;
+    padding: 18px 20px;
+    border-radius: 8px;
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.erp-menu-item:hover {
+    background: var(--lighter-bg);
+    border-color: var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.1);
+}
+
+.erp-menu-item strong {
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.erp-menu-item strong i {
+    margin-right: 10px;
+    color: var(--primary-blue);
+    font-size: 16px;
+}
+
+.erp-menu-item small {
+    display: block;
+    color: var(--text-gray);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+@media (min-width: 992px) {
+    .navbar .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+        margin-top: 0;
+    }
+
+    .navbar .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Mobile Offcanvas */
+.offcanvas-dark {
+    background-color: #212529;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 14.5px;
+}
+
+.mobile-menu a:hover {
+    color: var(--white);
+    padding-left: 6px;
+    transition: 0.2s;
+}
+
+.mobile-menu .nav-link-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    color: var(--white);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.mobile-menu .nav-link-item:hover {
+    padding-left: 8px;
+    color: var(--accent-yellow);
+}
+
+.mobile-menu .nav-link-item i {
+    width: 24px;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.mobile-menu .btn-mobile {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Mobile Accordion */
+.mobile-accordion .accordion-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-accordion .accordion-button {
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 500;
+    padding: 16px 0;
+    border: none;
+    box-shadow: none;
+    font-size: 15px;
+}
+
+.mobile-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--white);
+    box-shadow: none;
+}
+
+.mobile-accordion .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.mobile-accordion .accordion-body {
+    padding: 0.5rem 0 1rem 0;
+    color: #e5e7eb;
+}
+
+.mobile-submenu-title {
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding-left: 4px;
+}
+
+.mobile-submenu-title:first-child {
+    margin-top: 0;
+}
+
+.mobile-submenu-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 4px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.mobile-submenu-link:hover {
+    color: var(--white);
+    padding-left: 12px;
+}
+
+.mobile-submenu-link i {
+    width: 20px;
+    margin-right: 10px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/*.mobile-get-started {*/
+/*    font-size: 16px;*/
+/*    font-weight: 400;*/
+/*    transition: opacity 0.3s ease, transform 0.3s ease;*/
+/*    color: #fff !important;*/
+/*}*/
+.mobile-get-started {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 18px !important;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: #fff !important;
+}
+.mobile-call-btn {
+    /* background-color: #0a257c; */
+    background: linear-gradient(135deg, #198754 0%, #1e3a8a 100%) !important;
+}
+
+.mobile-get-started.show {
+    display: inline-block !important;
+}
+
+@media (min-width: 992px) {
+    .btn.btn-warning.rounded-pill {
+        transition: opacity 0.3s ease;
+    }
+}
+
+/*mega menu hover indicator*/
+/*.navbar .dropdown:hover > .nav-link {*/
+/*    color: #fbbf24 !important;*/
+/*    background-color: rgba(251, 191, 36, 0.15);*/
+/*    border-radius: 8px;*/
+/*}*/
+
+.navbar .dropdown:hover>.nav-link {
+    color: #fbbf24 !important;
+    font-weight: 600;
+    transform: scale(1.05);
+}
