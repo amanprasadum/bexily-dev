@@ -5,13 +5,6 @@
     width: 173px;
 }
 
-/*.footer-brand img.navbar-logo {*/
-/*    background-color: #f3f3f3;*/
-/*    padding: 6px 20px;*/
-/*    width: 180px;*/
-/*    border-radius: 9px;*/
-/*}*/
-
 .top-bar {
     background: var(--primary-dark);
     color: var(--white);
@@ -37,8 +30,6 @@
 }
 
 .navbar-toggler {
-    /* background-color: #000 !important; */
-
     background-color: #198754 !important;
     height: 50px;
     width: 50px;
@@ -68,14 +59,12 @@
 }
 
 /* ===== NAVBAR SMOOTH TOP ENTRY ON SCROLL ===== */
-/* ===== NAVBAR ENTRY ANIMATION ===== */
 .cx-main-header {
     z-index: 999;
     border-bottom: 1px solid #e3e3e3;
     transition: transform 0.45s ease, box-shadow 0.3s ease;
 }
 
-/* Desktop - animate on scroll */
 @media (min-width: 992px) {
     .cx-main-header {
         transform: translateY(0);
@@ -88,26 +77,19 @@
     .cx-header-visible {
         transform: translateY(0);
     }
-
-
 }
 
-/* Mobile sticky behavior (unchanged) */
 @media (max-width: 991px) {
     .cx-header-sticky {
         animation: cx-slide-from-top 0.45s ease forwards;
     }
 
     @keyframes cx-slide-from-top {
-        from {
-            transform: translateY(-100%);
-        }
-
-        to {
-            transform: translateY(0);
-        }
+        from { transform: translateY(-100%); }
+        to   { transform: translateY(0); }
     }
 }
+
 .cx-header-sticky {
     position: fixed;
     top: 0;
@@ -119,9 +101,8 @@
 
 @keyframes cx-slide-from-top {
     from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+    to   { transform: translateY(0); }
 }
-
 
 /* Desktop Mega Menu */
 .mega-menu {
@@ -165,10 +146,9 @@
 }
 
 .mega-menu h6 {
-   font-size: 14px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-dark);
-    /* margin-bottom: 20px; */
     color: #0a257c;
     letter-spacing: -0.3px;
     padding-left: 9px;
@@ -382,12 +362,6 @@
     color: var(--text-light);
 }
 
-/*.mobile-get-started {*/
-/*    font-size: 16px;*/
-/*    font-weight: 400;*/
-/*    transition: opacity 0.3s ease, transform 0.3s ease;*/
-/*    color: #fff !important;*/
-/*}*/
 .mobile-get-started {
     font-size: 14px;
     font-weight: 400;
@@ -395,8 +369,8 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     color: #fff !important;
 }
+
 .mobile-call-btn {
-    /* background-color: #0a257c; */
     background: linear-gradient(135deg, #198754 0%, #1e3a8a 100%) !important;
 }
 
@@ -404,21 +378,110 @@
     display: inline-block !important;
 }
 
-@media (min-width: 992px) {
-    .btn.btn-warning.rounded-pill {
-        transition: opacity 0.3s ease;
-    }
-}
-
-/*mega menu hover indicator*/
-/*.navbar .dropdown:hover > .nav-link {*/
-/*    color: #fbbf24 !important;*/
-/*    background-color: rgba(251, 191, 36, 0.15);*/
-/*    border-radius: 8px;*/
-/*}*/
-
-.navbar .dropdown:hover>.nav-link {
+/* Mega menu hover indicator */
+.navbar .dropdown:hover > .nav-link {
     color: #fbbf24 !important;
     font-weight: 600;
     transform: scale(1.05);
+}
+
+/* ========================================
+   SCHEDULE A CALL BUTTON — DESKTOP
+======================================== */
+.nav-item .btn.btn-warning.rounded-pill {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #fff !important;
+    background: linear-gradient(135deg, #f59e0b 0%, #ef6c00 60%, #f59e0b 100%);
+    background-size: 200% auto;
+    border-radius: 100px;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
+    transition: background-position 0.5s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    animation: sac-pulse 2.8s ease-in-out infinite;
+}
+
+/* Shimmer sweep */
+.nav-item .btn.btn-warning.rounded-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.38) 50%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    animation: sac-shimmer 3.2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Phone icon */
+.nav-item .btn.btn-warning.rounded-pill::after {
+    content: '📞';
+    font-size: 13px;
+    display: inline-block;
+    animation: sac-ring 3.5s ease-in-out infinite;
+}
+
+/* Hover */
+.nav-item .btn.btn-warning.rounded-pill:hover {
+    background-position: right center;
+    box-shadow:
+        0 6px 24px rgba(245, 158, 11, 0.65),
+        0 0 0 4px rgba(245, 158, 11, 0.18);
+    transform: translateY(-2px) scale(1.04);
+    color: #fff !important;
+    text-decoration: none;
+}
+
+/* Click */
+.nav-item .btn.btn-warning.rounded-pill:active {
+    transform: translateY(0px) scale(0.97);
+    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.4);
+}
+
+/* Pulsing glow ring */
+@keyframes sac-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
+    }
+    50% {
+        box-shadow:
+            0 4px 22px rgba(245, 158, 11, 0.75),
+            0 0 0 5px rgba(245, 158, 11, 0.12);
+    }
+}
+
+/* Shimmer sweep */
+@keyframes sac-shimmer {
+    0%          { left: -75%; opacity: 0; }
+    8%          { opacity: 1; }
+    55%         { left: 130%; opacity: 1; }
+    56%, 100%   { left: 130%; opacity: 0; }
+}
+
+/* Phone ring shake */
+@keyframes sac-ring {
+    0%, 70%, 100% { transform: rotate(0deg); }
+    72%           { transform: rotate(-18deg); }
+    74%           { transform: rotate(18deg); }
+    76%           { transform: rotate(-14deg); }
+    78%           { transform: rotate(14deg); }
+    80%           { transform: rotate(-8deg); }
+    82%           { transform: rotate(8deg); }
+    84%           { transform: rotate(0deg); }
 }
